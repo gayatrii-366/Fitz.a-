@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face & Fashion AI</title>
+</head>
+<body>
+    <h1>Upload Your Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if face_shape %}
+        <h2>Detected Face Shape: {{ face_shape }}</h2>
+        <h3>Recommended Styles:</h3>
+        <ul>
+            {% for rec in recommendations %}
+                <li>{{ rec }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
