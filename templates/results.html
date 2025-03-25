@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Your Style Analysis Results</h1>
+    
+    {% if body_shape %}
+        <h2>Body Shape: {{ body_shape }}</h2>
+    {% endif %}
+    
+    {% if face_shape %}
+        <h2>Face Shape: {{ face_shape }}</h2>
+    {% endif %}
+    
+    {% if skin_tone %}
+        <h2>Skin Tone: {{ skin_tone }}</h2>
+    {% endif %}
+    
+    {% if color_suggestions %}
+        <h2>Recommended Colors: {{ color_suggestions }}</h2>
+    {% endif %}
+</body>
+</html>
